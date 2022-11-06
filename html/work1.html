@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style>
+
+                h2{
+                    text-align: center;
+                }
+
+                form{
+                    width: 800px;
+                    height: 800px;
+                    border: 1px solid red;
+                    margin: auto;
+                    
+                }
+
+                p{
+                    width: 700px;
+                    height: 80px;
+                    background: white;
+                    border-radius: 20px 20px 20px 20px;
+                    line-height: 80px;
+                    margin: auto;
+                    margin-top: 30px;
+                    padding-left: 50px;
+                }
+
+                span{
+                    margin-left: 200px;
+                }
+
+                #b{
+                    width: 60px;
+                    height: 50px;
+                    border: 1px solid rgb(61, 121, 96);
+                    
+                    margin:auto;
+                    margin-top: 50px;
+                    border-radius: 30px 30px 30px 30px;
+                    text-align: center;
+                    line-height: 50px;
+                }
+
+                div > input{
+                    
+                }
+
+        </style>
+
+</head>
+
+<body>
+
+    <h2>注册表单</h2>
+        <form action="">
+
+            <p>用户昵称：<span><input type="text"></span> </p>
+
+            <p>Email：<span><input type="email" required placeholder="example@domain.com"></span></p>
+
+            <p>工作年龄：<span><input type="range" min="1" max="30"> 30 </span></p>
+
+            <p>年龄：<span><input type="number" required placeholder="your age" min="1" max="20" step="3"></span></p>
+
+            <p>出生日期：<span><input type="date"></span></p>
+
+            <p>个人主页：<span><input type="url"></span></p>
+
+            <div id="b"><input type="button" value="注册"></div>
+
+
+    </form>
+
+</body>
+
+</html>

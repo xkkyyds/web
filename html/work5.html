@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>页脚广告</title>
+</head>
+<style>
+    #center {
+        background: pink;
+        margin: auto;
+        width: 500px;
+        height: 700px;
+    }
+    
+    a {
+        text-decoration: none;
+        margin-top: 125px;
+        float: right;
+    }
+    
+    #left,
+    #right {
+        position: fixed;
+        top: 40px;
+        width: 120px;
+        height: 170px;
+        padding: 10px;
+        background: red;
+    }
+    
+    #left {
+        left: 0;
+    }
+    
+    #right {
+        right: 0;
+    }
+</style>
+
+<body>
+
+    <div id="main">
+
+
+        <div class="box" id="left">
+            一刀999！
+
+            <a href="#" onclick="function1()">关闭广告</a>
+        </div>
+
+        <div class="box" id="center">
+            <p>网页内容</p>
+
+
+        </div>
+
+        <div class="box" id="right">
+            上线就送神器！
+            <a href="#" onclick="function2()">关闭广告</a>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        function function1() {
+            var l = document.getElementById("left")
+            l.style.display = 'none';
+        }
+
+        function function2() {
+            var r = document.getElementById("right")
+            r.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用列表及css属性创建纵向菜单</title>
+		<style type="text/css">
+			body{
+				margin: 10px;
+				font-size: 12px;
+				text-align: center;
+				font-family: verdana,geneva,sans-serif;
+				
+			}
+			#menu{
+				width: 100px;
+				border: 1px solid #ccc/*设置菜单得边框
+				                        */
+			}
+			#menu ul{
+				margin: 0px;/*ul上下外边框默认为12px，重置ul的默认外边框样式*/
+				padding: 0px;/*ul的左内边距默认为40px，重置ul的默认内边框样式*/
+				list-style-type: none;/*设置列表的项目符号*/
+			}
+			#menu ul li{
+				padding: 12px 0px;
+				background:rgb(61, 224, 227);
+				border-bottom: 1px solid #ccc;
+				
+			}
+			#menu ul li.last{
+				border-bottom: 0px;/*将最后一个列表项的下边框取消*/
+			}
+			a:link{
+				/*
+				 * 使用伪代码设置未访问状态
+				 */
+				color: #000;
+				text-decoration: none;
+			}
+			a:hover{
+				/*使用伪类设置鼠标选停状态样式*/
+				color: rgb(197, 15, 42);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="menu">
+			<ul>
+				<li><a href="#">菜单项</a></li>
+				<li><a href="#">菜单项</a></li>
+				<li><a href="#">菜单项</a></li>
+				<li><a href="#">菜单项</a></li>
+				<li><a href="#">菜单项</a></li>
+				<li class="last"><a href="#">菜单项</a></li>
+			</ul>
+		</div>
+ 
+	</body>
+</html>

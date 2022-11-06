@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入css、js -->
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js"></script>
+    <script>
+      
+        function login(){
+            //username是input输入框对象的值 value属性来获取输入框的值
+            var username=document.getElementById("username").value;
+            var password=document.getElementById("password").value;
+            //用户名不能为空并且长度不能超过5位
+            // 密码不能超过6位
+            //字符串的length属性表示字符串的长度
+            if(username.length>5 || username ==""){
+                alert("当前用户名输入不合法");
+                //结束整个方法
+                return;
+            }
+            if(password.length>6 || password ==""){
+                alert("当前密码输入不合法");
+                return;
+            }
+            //匹配用户名和密码
+            if(username == "xkk" && password=="123"){
+                //验证成功,跳转成功页面
+                //事件：用户与浏览器之间的行为交互
+                //点击、鼠标移入、鼠标移出
+                //通过JS强制跳转页面
+                window.location.href="./html/index.html";
+            }
+        }
+        // 当用户名输入框值改变时，就去判断值的合法性
+        var username=document.getElementById("username");
+        username.onchange=function(){
+            var value=username.value;
+            if(value.length>5 || value ==""){
+                alert("当前用户名输入不合法");
+                //结束整个方法
+                return;
+            }
+        }
+        //失去焦点事件
+        
+    </script>
+</head>
+<body>
+    <!-- 搭建结构 -->
+    <div class="container switch">
+        <!-- 注册页面 -->
+        <div class="container-form container-signup">
+            <form action="" class="form">
+                <h2 class="form-title">Sign Up</h2>
+                <input  type="text" placeholder="User" class="input">
+                <input  type="email" placeholder="Email" class="input">
+                <input type="password" placeholder="Password" class="input">
+                <button class="submit">sign up</button>
+            </form>
+        </div>
+        <!-- 登录页面 -->
+        <div class="container-form container-signin">
+            <form action="javascript:void(0);" class="form">
+                <h2 class="form-title">Sign In</h2>
+                <input id="username" type="text" placeholder="User" class="input" >
+                <input id="password" type="password" placeholder="Password" class="input">
+                <a href="javascript:void(0);">forgot your password?</a>
+                <button onclick="login()" class="submit">sign in</button>
+            </form>
+        </div>
+        <!-- 覆盖层 -->
+        <div class="container-overlay">
+            <div class="overlay">
+                <div class="overlay-slide overlay-left">
+                    <button class="submit" id="goSignIn">sign in</button>
+                </div>
+                <div class="overlay-slide overlay-right">
+                    <button class="submit" id="goSignUp">sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- 结构搭建完成 -->
